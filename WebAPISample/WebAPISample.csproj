@@ -226,6 +226,10 @@
     <Compile Include="Migrations\201909111437557_InitialMigration.Designer.cs">
       <DependentUpon>201909111437557_InitialMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201909111513150_SeedMovieDatabaseMigration.cs" />
+    <Compile Include="Migrations\201909111513150_SeedMovieDatabaseMigration.Designer.cs">
+      <DependentUpon>201909111513150_SeedMovieDatabaseMigration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -349,6 +353,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201909111437557_InitialMigration.resx">
       <DependentUpon>201909111437557_InitialMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909111513150_SeedMovieDatabaseMigration.resx">
+      <DependentUpon>201909111513150_SeedMovieDatabaseMigration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

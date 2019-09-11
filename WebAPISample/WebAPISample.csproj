@@ -226,6 +226,10 @@
     <Compile Include="Migrations\201909111437557_InitialMigration.Designer.cs">
       <DependentUpon>201909111437557_InitialMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201909111507041_adde-seed-data-to-db.cs" />
+    <Compile Include="Migrations\201909111507041_adde-seed-data-to-db.Designer.cs">
+      <DependentUpon>201909111507041_adde-seed-data-to-db.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -349,6 +353,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201909111437557_InitialMigration.resx">
       <DependentUpon>201909111437557_InitialMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909111507041_adde-seed-data-to-db.resx">
+      <DependentUpon>201909111507041_adde-seed-data-to-db.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -11,11 +11,11 @@ namespace WebAPISample.Controllers
     public class MovieController : ApiController
     {
         private ApplicationDbContext db = new ApplicationDbContext();
-        // GET api/values
+        // GET api/Movie
         [HttpGet]
         public IHttpActionResult Get()
         {
-            var movieList = db.Movies.Select(m => m.Title);
+            var movieList = db.Movies;
             //List<string> movieList = new List<string>();
             //foreach (var movie in db.Movies)
             //{
@@ -26,17 +26,17 @@ namespace WebAPISample.Controllers
             //return new string[] { "movie1 string", "movie2 string" };
         }
 
-        // GET api/values/5
+        // GET api/Movie/5
         [HttpGet]
         public IHttpActionResult Get(int id)
         {
             Movie movie = db.Movies.FirstOrDefault(m => m.MovieId == id);
-            return Ok(movie.Title);
+            return Ok(movie);
             // Retrieve movie by id from db logic
             //return "value";
         }
 
-        // POST api/values
+        // POST api/Movie
         [HttpPost]
         public void Post([FromBody]Movie value)
         {
@@ -51,7 +51,7 @@ namespace WebAPISample.Controllers
             // Create movie in db logic
         }
 
-        // PUT api/values/5
+        // PUT api/Movie/5
         [HttpPut]
         public void Put(int id, [FromBody]Movie value)
         {
@@ -63,7 +63,7 @@ namespace WebAPISample.Controllers
             // Update movie in db logic
         }
 
-        // DELETE api/values/5
+        // DELETE api/Movie/5
         [HttpDelete]
         public void Delete(int id)
         {

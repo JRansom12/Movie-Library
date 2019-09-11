@@ -22,7 +22,9 @@ namespace WebAPISample.Migrations
             new Movie { Title = "Inception", Genre = "Drama", Director = "Christopher Nolan" },
             new Movie { Title = "Pineapple Express", Genre = "Comedy", Director = "David Gordon Green" },
             new Movie { Title = "Die Hard", Genre = "Action", Director = "John McTiernan" }
-);
+
+            );
+
             //  This method will be called after migrating to the latest version.
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 

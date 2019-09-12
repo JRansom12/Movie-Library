@@ -114,9 +114,6 @@ function renderHTML(data){
 
 
 
-
-
-
 // window.addEventListener("load", function(){
 //   var ourRequest = new XMLHttpRequest();
 //   ourRequest.open('GET', 'https://localhost:44352/api/movie')

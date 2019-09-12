@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>jQuery AJAX POST Form</title>
+    <title>Movie Library</title>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="movie.css">
 </head>
@@ -18,25 +18,21 @@
     <input type="text" name="genre" placeholder="Genre" />
     <input type="text" name="director" placeholder="Director" />
 
-
     <button type="submit">Submit</button>
-
 </form>
 
-<h2>Movie</h2>
+<p>Edit a movie in the library here</p>
 
-<button id="btn">View Movie Library</button>
+<form id="my-formTwo">
+    <input type="text" name="title" placeholder="Title" />
+    <input type="text" name="genre" placeholder="Genre" />
+    <input type="text" name="director" placeholder="Director" />
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Genre</th>
-    <th>Director</th>
-  </tr>
-    <div id="movieInfo"></div>
-  <tr>
+    <button type="edit">Edit</button>
+</form>
 
-</table>
+<br>
+
 <div id="movieInfo"></div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>

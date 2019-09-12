@@ -18,33 +18,38 @@
     <input type="text" name="genre" placeholder="Genre" />
     <input type="text" name="director" placeholder="Director" />
 
-
-<<<<<<< HEAD
-    <button onclick="addMovie()">Add a movie</button>
-
-    <button onclick="gettingMovies()">List of movies</button>
-
-
-=======
     <button type="submit">Submit</button>
->>>>>>> 2d26f543b4232a99a992a6ec96bc08cf504f02bd
-
 </form>
 
-<h2>Movie</h2>
 
-<button id="btn">View Movie Library</button>
+<p>Change the details of a movie:</p>
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Genre</th>
-    <th>Director</th>
-  </tr>
-    <div id="movieInfo"></div>
-  <tr>
+<div id="response">
+    <pre></pre>
+</div>
 
-</table>
+<form id="my-form">
+    <input type="text" name="title" placeholder="Edit Title" />
+    <input type="text" name="genre" placeholder="Edit Genre" />
+    <input type="text" name="director" placeholder="Edit Director" />
+
+    <button type="submit">Update</button>
+</form>
+
+
+
+
+
+
+
+
+
+
+<body>
+    <input type="button" onclick="gettingMovies" value="View Movie Library" />
+    <p id="showData"></p>
+</body>
+
 <div id="movieInfo"></div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>

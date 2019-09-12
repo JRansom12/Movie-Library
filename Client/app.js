@@ -28,6 +28,14 @@
 
 
 
+var getData = new XMLHttpRequest();
+getData.open('GET', 'https://localhost:44352/api/movie')
+getData.onload = function gettingMovies(){
+  var movies = JSON.parse(getData.reponseText);
+  console.log(movies);
+};
+getData.send();
+
 function gettingMovies(){
   $.ajax({
     url: "https://localhost:44352/api/movie",
@@ -36,11 +44,8 @@ function gettingMovies(){
     async: true,
     data: JSON,
     success: function(movies){
-      movieListSuccess(movie);
+      console.log();
     },
-    error: function(request, message, error){
-      handleException(request, message, error);
-    }
   });
 }
 
@@ -48,7 +53,7 @@ function gettingMovies(){
 
 function addMovie(movies){
   $.ajax({
-    url: "/api/Movie",
+    url: "https://localhost:44352/api/movie",
     type: "post",
     contentType: "JSON",
     data: JSON.stringify(product),
@@ -59,36 +64,27 @@ function addMovie(movies){
 }
 
 
-
 function updateMovie(movies) {
   $.ajax({
-    url: "/api/Movie",
-    type: 'PUT',
-    contentType:
-       "application/json;charset=utf-8",
+    url: "https://localhost:44352/api/movie",
+    type: "PUT",
+    contentType: "application/json;charset=utf-8",
     data: JSON.stringify(movie),
     success: function (movie) {
       productUpdateSuccess(movie);
     },
-    error: function (request, message, error) {
-      handleException(request, message, error);
-    }
   });
 }
 
 
 
 function deleteMovie(ctl) {
-  var id = $(ctl).data("id");
-
+  let id = $(ctl).data("id");
   $.ajax({
-    url: "/api/Movie" + id,
+    url: "https://localhost:44352/api/movie" + id,
     type: 'DELETE',
     success: function (movie) {
       $(ctl).parents("tr").remove();
     },
-    error: function (request, message, error) {
-      handleException(request, message, error);
-    }
   });
 }

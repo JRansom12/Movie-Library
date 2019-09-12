@@ -3,8 +3,11 @@
 <head>
     <title>jQuery AJAX POST Form</title>
     <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="movie.css">
 </head>
 <body>
+<h1>Movie Library</h1>
+<p>Add a new movie to the library here</p>
 
 <div id="response">
     <pre></pre>
@@ -12,10 +15,28 @@
 
 <form id="my-form">
     <input type="text" name="title" placeholder="Title" />
-    <input type="text" name="director" placeholder="Director" />
+    <input type="text" name="genre" placeholder="Genre" />
+    <input type="text" name="direction" placeholder="Director" />
 
     <button type="submit">Submit</button>
+
 </form>
+
+<h2>Movie</h2>
+
+<button id="btn">View Movie Library</button>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Genre</th>
+    <th>Director</th>
+  </tr>
+    <div id="movieInfo"></div>
+  <tr>
+
+</table>
+<div id="movieInfo"></div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script type="text/javascript" src="./app.js"></script>

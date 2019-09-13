@@ -58,7 +58,7 @@ function renderHTML(data){
 
 (function($){
     function processForm( e ){
-        var dict = {
+        var movies = {
         	Title : this["title"].value,
         	Genre: this["genre"].value,
           Director: this["director"].value
@@ -66,7 +66,6 @@ function renderHTML(data){
 
         $.ajax({
             url: 'https://localhost:44352/api/movie',
-            dataType: 'json',
             type: 'PUT',
             contentType: 'application/json',
             data: JSON.stringify(dict),
@@ -84,9 +83,16 @@ function renderHTML(data){
     $('#my-form').submit( processForm );
 })(jQuery);
 
-
-
-
+function GetMovieToEdit(){
+  var movieToEdit = movies.filter(function(el){
+    if (person.id == el.movies){
+      return true;
+    } else {
+      return false;
+    }
+  });
+  return movies[i];
+}
 
 
 

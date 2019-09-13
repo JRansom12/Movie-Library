@@ -1,42 +1,57 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Movie Library</title>
+    <title>My Movie Library</title>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="movie.css">
 </head>
 <body>
-<h1>Movie Library</h1>
-<p>Add a new movie to the library here</p>
+<center>
+  <h1>My Movie Library</h1>
+<p>Add a new movie to the library!</p>
 
 <div id="response">
     <pre></pre>
 </div>
 
-<form id="my-form">
+<div class="absolute">
+  <img src="http://www.pngmart.com/files/3/Popcorn-PNG-HD.png" alt="popcorn" width=225px height = 225px>
+</div>
+<div class="absoluteTwo">
+  <img src="http://pngimg.com/uploads/cocacola/cocacola_PNG23.png" alt="coke" width=225px height = 225px>
+</div>
+
+<form id="my-form" class="simple-form">
     <input type="text" name="title" placeholder="Title" />
     <input type="text" name="genre" placeholder="Genre" />
     <input type="text" name="director" placeholder="Director" />
 
-    <button type="submit">Submit</button>
-
+    <button type="submit" class="button1">Submit</button>
 </form>
-
-<p>Edit a movie in the library here</p>
-
-<form id="my-formTwo">
-    <input type="text" name="title" placeholder="Title" />
-    <input type="text" name="genre" placeholder="Genre" />
-    <input type="text" name="director" placeholder="Director" />
-
-    <button type="edit">Edit</button>
-</form>
+<div style="overflow-y:scroll;">
+  <table id="movieTable">
+    <th>Title</th>
+    <th>Genre</th>
+    <th>Director</th>
+  </table>
+</div>
 
 <br>
 
-<div id="movieInfo"></div>
+<p>Edit a movie in the library</p>
+
+<form id="my-formTwo" class="simple-form">
+    <input type="text" name="title" placeholder="Title" />
+    <input type="text" name="genre" placeholder="Genre" />
+    <input type="text" name="director" placeholder="Director" />
+
+    <button type="edit" class="button1">Edit</button>
+</form>
+
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script type="text/javascript" src="./app.js"></script>
+</center>
 </body>
 </html>

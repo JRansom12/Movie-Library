@@ -1,21 +1,97 @@
 html {
-  background: url(https://wallpaperplay.com/walls/full/4/5/f/80955.jpg) no-repeat center center fixed;
+  background: url(https://images.samsung.com/is/image/samsung/uk-blu-ray-home-entertainement-system-j4550-ht-j4550-xu-008-front-black) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
+  background-size: contain;
   background-color: black;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 h1{
-  color: white;
-  text-shadow: 4px 4px 8px #000000;
+  color: #b30000;
+  text-align: center;
+  text-decoration: underline;
 }
 p{
-  color: white;
-  font-size 20px;
+  color: gold;
+  font-size: 20px;
   font-family: "Times New Roman", Times, serif;
 }
-image{
-  height: 600px;
-  width: 400px
+th{
+  color: white;
+}
+td{
+  color: white;
+}
+.button1 {
+  background-color: gold;
+  border: 6px solid #b30000;
+  border-left: 6px solid;
+  border-left-color: white;
+  border-right: 6px solid;
+  border-right-color: white;
+  border-radius: 0%;
+  color: black;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+}
+
+.simple-form {
+  padding-bottom: 1.25rem;
+}
+.simple-form input {
+  margin: 0 1.25rem;
+  min-width: 125px;
+  border: 6px solid #b30000;
+  border-left: 6px solid;
+  border-left-color: gold;
+  border-right: 6px solid;
+  border-right-color: gold;
+  border-radius: 0%;
+  transition: border-color .5s ease-out;
+  font-size: 15px
+}
+
+div.absolute {
+  position: absolute;
+  top: 225px;
+  right: 20px;
+  width: 225px;
+  height: 225px;
+  border: 0px solid #73AD21;
+}
+div.absoluteTwo {
+  position: absolute;
+  top: 225px;
+  left: 20px;
+  width: 225px;
+  height: 225px;
+  border: 0px solid #73AD21;
+}
+
+movieTable, th, td {
+  border: 2px solid  #b30000;
+}
+table {
+  width: 450px;
+  height: 225px;
+  display: block;
+}
+tr:hover {background-color: gold;}
+/* th{
+  position: fixed;
+} */
+td{
+  font-size: 16px
+}
+th{
+  font-size: 20px;
 }

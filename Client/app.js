@@ -40,14 +40,13 @@ function GetMovies(){
     ourRequest.send();
   }
 
-
-  function GetMovieToEdit(){
-    var movieToEdit = movies.filter(function(el){
-      if (person.id == el.movies){
-        return true;
-      } else {
-        return false;
-      }
-    });
-    return movies[i];
-  }
+function GetMovieToEdit(){
+  var movieToEdit = movies.filter(function(el){
+    if (person.id == el.movies){
+      return true;
+    } else {
+      return false;
+    }
+  });
+  return movies[i];
+}

@@ -29,6 +29,9 @@
 
     <button type="submit" class="button1">Submit</button>
 </form>
+
+<p>Click on a row to edit a movie below</p>
+
 <div style="overflow-y:scroll;">
   <table id="movieTable">
     <th>Title</th>
@@ -37,14 +40,12 @@
   </table>
 </div>
 
-<br>
-
 <p>Edit a movie in the library</p>
 
 <form id="my-formTwo" class="simple-form">
-    <input type="text" name="title" placeholder="Title" />
-    <input type="text" name="genre" placeholder="Genre" />
-    <input type="text" name="director" placeholder="Director" />
+    <input type="text" id="titleEdit" placeholder="Title" value=""/>
+    <input type="text" id="genreEdit" placeholder="Genre" value=""/>
+    <input type="text" id="directorEdit" placeholder="Director" value=""/>
 
     <button type="edit" class="button1">Edit</button>
 </form>

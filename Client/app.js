@@ -52,19 +52,6 @@ $( document ).ready(function() {
   });
 });
 
-
-function GetMovieToEdit(){
-  alert("Movies yeah yeah");
-  var movieToEdit = movies.filter(function(el){
-    if (person.id == el.movies){
-      return true;
-    } else {
-      return false;
-    }
-  });
-  return movies[i];
-}
-
 (function($){
     function editMovie( e ){
         var dict = {
@@ -81,8 +68,7 @@ function GetMovieToEdit(){
             contentType: 'application/json',
             data: JSON.stringify(dict),
             success: function( data, textStatus, jQxhr ){
-                // document.getElementById("movieList").innerHTML = "";
-                        GetMovies();
+                GetMovies();
             },
             error: function( jqXhr, textStatus, errorThrown ){
                 console.log( errorThrown );
@@ -92,3 +78,28 @@ function GetMovieToEdit(){
     }
     $('#my-formTwo').submit( editMovie );
 })(jQuery);
+
+$(document).ready(function(){
+     $('#search').keyup(function(){
+          search_table($(this).val());
+     });
+     function search_table(value){
+          $('#movieTable tr').each(function(){
+               var found = 'false';
+               $(this).each(function(){
+                    if($(this).text().toLowerCase().indexOf(value.toLowerCase()) >= 0)
+                    {
+                         found = 'true';
+                    }
+               });
+               if(found == 'true')
+               {
+                    $(this).show();
+               }
+               else
+               {
+                    $(this).hide();
+               }
+          });
+     }
+});

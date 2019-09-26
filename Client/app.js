@@ -13,15 +13,14 @@
             contentType: 'application/json',
             data: JSON.stringify(dict),
             success: function( data, textStatus, jQxhr ){
+                GetMovies();
                 $('#response pre').html( data );
             },
             error: function( jqXhr, textStatus, errorThrown ){
                 console.log( errorThrown );
             }
         });
-
         e.preventDefault();
-        GetMovies();
     }
     $('#my-form').submit( processForm );
 })(jQuery);
@@ -34,7 +33,7 @@ function GetMovies(){
     var movieList = JSON.parse(ourRequest.responseText);
       $("#movieTable").find("tr:gt(0)").remove();
     for(i = 0; i < movieList.length; i++){
-      $("#movieTable").append("<tr><td>"+ movieList[i].Title + "</td><td>" + movieList[i].Genre + "</td><td>" + movieList[i].Director  + "</td></tr>");
+      $("#movieTable").append("<tr><td>"+ movieList[i].MovieId + "</td><td>"+ movieList[i].Title + "</td><td>" + movieList[i].Genre + "</td><td>" + movieList[i].Director  + "</td></tr>");
     }
     console.log(movieList);
   }
@@ -46,12 +45,12 @@ $( document ).ready(function() {
       var rowData = $(this).children("td").map(function() {
           return $(this).text();
       }).get();
-      $("#titleEdit").val(rowData[0])
-      $("#genreEdit").val(rowData[1])
-      $("#directorEdit").val(rowData[2]);
+      $("#movieIdEdit").val(rowData[0])
+      $("#titleEdit").val(rowData[1])
+      $("#genreEdit").val(rowData[2])
+      $("#directorEdit").val(rowData[3]);
   });
 });
-
 
 
 function GetMovieToEdit(){
@@ -67,28 +66,29 @@ function GetMovieToEdit(){
 }
 
 (function($){
-    function processForm( e ){
+    function editMovie( e ){
         var dict = {
-        	Title : this["title"].value,
-        	Genre: this["genre"].value,
-          Director: this["director"].value
+          Id: this["movieIdEdit"].value,
+        	Title : this["titleEdit"].value,
+        	Genre: this["genreEdit"].value,
+          Director: this["directorEdit"].value
         };
 
         $.ajax({
-            url: 'https://localhost:44352/api/movie',
+            url: `https://localhost:44352/api/movie/${this["movieIdEdit"].value}/`,
             dataType: 'json',
             type: 'PUT',
             contentType: 'application/json',
             data: JSON.stringify(dict),
             success: function( data, textStatus, jQxhr ){
-                $('#response pre').html( data );
+                // document.getElementById("movieList").innerHTML = "";
+                        GetMovies();
             },
             error: function( jqXhr, textStatus, errorThrown ){
                 console.log( errorThrown );
             }
         });
-
         e.preventDefault();
     }
-    $('#my-form').submit( processForm );
+    $('#my-formTwo').submit( editMovie );
 })(jQuery);

@@ -34,6 +34,7 @@
 
 <div style="overflow-y:scroll;">
   <table id="movieTable">
+    <th>Id</th>
     <th>Title</th>
     <th>Genre</th>
     <th>Director</th>
@@ -43,11 +44,19 @@
 <p>Edit a movie in the library</p>
 
 <form id="my-formTwo" class="simple-form">
+    <input type="text" id="movieIdEdit" placeholder="Id" value=""/>
     <input type="text" id="titleEdit" placeholder="Title" value=""/>
     <input type="text" id="genreEdit" placeholder="Genre" value=""/>
     <input type="text" id="directorEdit" placeholder="Director" value=""/>
 
-    <button type="edit" class="button1">Edit</button>
+    <button type="submit" class="button1">Edit</button>
+</form>
+
+<p>Search for a movie in the library</p>
+
+<form id="my-formThree" class="simple-form">
+    <input type="text" id="search" placeholder="" value=""/>
+    <button type="search" class="button1">Search</button>
 </form>
 
 
